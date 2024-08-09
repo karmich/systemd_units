@@ -1,6 +1,11 @@
+[Unit]
+Description=SSH Dynamic Port Forwarding
+After=network.target
+
+[Service]
 EnvironmentFile=/etc/ssh_tunnels/%i
 Type=forking
-User=kma
+User=
 ExecStart=/usr/bin/ssh \
    -vvv \
    -f \
