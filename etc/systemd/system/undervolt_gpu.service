@@ -1,0 +1,12 @@
+[Unit]
+Description=Run script to undervolt GPU by 100 mV
+After=graphical.target
+Requires=graphical.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/undervolt_gpu
+User=root
+
+[Install]
+WantedBy=graphical.target

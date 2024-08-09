@@ -1,0 +1,4 @@
+SERVER=user@xxx.xxx.xxx.xxx
+SSH_DYNAMIC_PORT=
+SSH_PORT=
+PRIVATE_KEY_FILE=/home/user/.ssh/id_ecdsa
