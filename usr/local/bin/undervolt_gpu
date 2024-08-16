@@ -5,8 +5,7 @@ FREQ_MIN=500
 FREQ_MAX=2400
 VOLTAGE_OFFSET=-50
 
-while [ ! -d $DEVICE ]
-do
+while [ ! -d $DEVICE ]; do
     sleep 1
 done
 
@@ -15,12 +14,10 @@ ls -1 $DEVICE_DIR
 echo ""
 
 
-for CARD_TITLE in card{0..3}
-do
+for CARD_TITLE in card{0..3}; do
     CARD=$DEVICE_DIR/$CARD_TITLE/device/pp_od_clk_voltage
 
-    if [ -f "$CARD" ]
-    then
+    if [ -f "$CARD" ]; then
         echo "$CARD_TITLE Exists!"
 
         echo "s 0 $FREQ_MIN" > "$CARD"
