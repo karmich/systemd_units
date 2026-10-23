@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# cpupower frequency-set -u 1500MHz
+cpupower frequency-set -g powersave
+[ -f /sys/devices/system/cpu/intel_pstate/no_turbo ] && (echo 1 | tee /sys/devices/system/cpu/intel_pstate/no_turbo)
+[ -f /sys/devices/system/cpu/cpufreq/boost ] && (echo 0 | tee /sys/devices/system/cpu/cpufreq/boost)
