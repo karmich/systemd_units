@@ -1,0 +1,11 @@
+[Unit]
+Description=Set CPU limits
+After=multi-user.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/setupcpu
+
+[Install]
+WantedBy=multi-user.target
